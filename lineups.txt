@@ -1,0 +1,120 @@
++++++Dallas Mavericks,8-3, 2nd West Southwest-----Mavericks PlayersPTSREBAST-----
+Luka Doncic, PG, 32.2,8.5,8.1,,,-----
+Kyrie Irving, SG, 26.3,5,6,,,-----
+Derrick Jones Jr., SF, 10.3,4.5,1.1,,,-----
+Grant Williams, PF, 8.2,4.2,1.6,,,-----
+Dereck Lively II, C, 9.9,7.3,1.2,,,-----
+::::: VS - 4:00 pm PT :::::
++++++Washington Wizards,2-8, 5th East Southeast-----Mavericks PlayersPTSREBAST-----
+Luka Doncic, PG, 32.2,8.5,8.1,,,-----
+Kyrie Irving, SG, 26.3,5,6,,,-----
+Derrick Jones Jr., SF, 10.3,4.5,1.1,,,-----
+Grant Williams, PF, 8.2,4.2,1.6,,,-----
+Dereck Lively II, C, 9.9,7.3,1.2,,,-----
+=================================
+
++++++Boston Celtics,8-2, 1st East Atlantic-----Celtics PlayersPTSREBAST-----
+Jrue Holiday, PG, 17.9,5.5,6.9,,,-----
+Derrick White, SG, 15.5,4.2,4.3,,,-----
+Jaylen Brown, SF, 23.7,5.9,3.4,,,-----
+Jayson Tatum, PF, 26.3,8.8,4.6,,,-----
+Kristaps Porzingis, C, 23.7,8.2,2.5,,,-----
+::::: VS - 4:30 pm PT :::::
++++++Philadelphia 76ers,8-2, 2nd East Atlantic-----Celtics PlayersPTSREBAST-----
+Jrue Holiday, PG, 17.9,5.5,6.9,,,-----
+Derrick White, SG, 15.5,4.2,4.3,,,-----
+Jaylen Brown, SF, 23.7,5.9,3.4,,,-----
+Jayson Tatum, PF, 26.3,8.8,4.6,,,-----
+Kristaps Porzingis, C, 23.7,8.2,2.5,,,-----
+=================================
+
++++++New York Knicks,5-5, 4th East Atlantic-----Knicks PlayersPTSREBAST-----
+Jalen Brunson, PG, 24.3,3.6,5.4,,,-----
+Quentin Grimes, SG, 8.1,2.1,1.5,,,-----
+RJ Barrett, SF, 18,4,2.4,,,-----
+Julius Randle, PF, 22.5,9.7,4.1,,,-----
+Mitchell Robinson, C, 7.4,10.1,0.8,,,-----
+::::: VS - 4:30 pm PT :::::
++++++Atlanta Hawks,6-4, 2nd East Southeast-----Knicks PlayersPTSREBAST-----
+Jalen Brunson, PG, 24.3,3.6,5.4,,,-----
+Quentin Grimes, SG, 8.1,2.1,1.5,,,-----
+RJ Barrett, SF, 18,4,2.4,,,-----
+Julius Randle, PF, 22.5,9.7,4.1,,,-----
+Mitchell Robinson, C, 7.4,10.1,0.8,,,-----
+=================================
+
++++++Milwaukee Bucks,6-4, 2nd East Central-----Bucks PlayersPTSREBAST-----
+Damian Lillard, PG, 29.4,4.5,6.4,,,-----
+Malik Beasley, SG, 11.1,3.4,1.6,,,-----
+Khris Middleton, SF, 13.4,3.8,4.3,,,-----
+Marques Bolden, PF, 7.4,5,0.5,,,-----
+Brook Lopez, C, 16.1,6.8,1.3,,,-----
+::::: VS - 4:30 pm PT :::::
++++++Toronto Raptors,5-5, 4th East Atlantic-----Bucks PlayersPTSREBAST-----
+Damian Lillard, PG, 29.4,4.5,6.4,,,-----
+Malik Beasley, SG, 11.1,3.4,1.6,,,-----
+Khris Middleton, SF, 13.4,3.8,4.3,,,-----
+Marques Bolden, PF, 7.4,5,0.5,,,-----
+Brook Lopez, C, 16.1,6.8,1.3,,,-----
+=================================
+
++++++Orlando Magic,5-5, 4th East Southeast-----Magic PlayersPTSREBAST-----
+Cole Anthony, PG, 12.5,4.6,3.7,,,-----
+Jalen Suggs, SG, 11.6,3.9,2.9,,,-----
+Franz Wagner, SF, 19.8,4.6,3.6,,,-----
+Paolo Banchero, PF, 20.2,7.1,4.2,,,-----
+Moritz Wagner, C, 12.7,5.2,1.6,,,-----
+::::: VS - 5:00 pm PT :::::
++++++Chicago Bulls,4-7, 4th East Central-----Magic PlayersPTSREBAST-----
+Cole Anthony, PG, 12.5,4.6,3.7,,,-----
+Jalen Suggs, SG, 11.6,3.9,2.9,,,-----
+Franz Wagner, SF, 19.8,4.6,3.6,,,-----
+Paolo Banchero, PF, 20.2,7.1,4.2,,,-----
+Moritz Wagner, C, 12.7,5.2,1.6,,,-----
+=================================
+
++++++Minnesota Timberwolves,8-2, 2nd West Northwest-----Timberwolves PlayersPTSREBAST-----
+Mike Conley, PG, 11.5,2.7,5.7,,,-----
+Anthony Edwards, SG, 24.8,5.7,4.5,,,-----
+Kyle Anderson, SF, 8.1,4.4,4.5,,,-----
+Karl-Anthony Towns, PF, 21.6,9.3,2.9,,,-----
+Rudy Gobert, C, 13,11.5,1.4,,,-----
+::::: VS - 6:00 pm PT :::::
++++++Phoenix Suns,4-6, 4th West Pacific-----Timberwolves PlayersPTSREBAST-----
+Mike Conley, PG, 11.5,2.7,5.7,,,-----
+Anthony Edwards, SG, 24.8,5.7,4.5,,,-----
+Kyle Anderson, SF, 8.1,4.4,4.5,,,-----
+Karl-Anthony Towns, PF, 21.6,9.3,2.9,,,-----
+Rudy Gobert, C, 13,11.5,1.4,,,-----
+=================================
+
++++++Sacramento Kings,5-4, 2nd West Pacific-----Kings PlayersPTSREBAST-----
+De'Aaron Fox, PG, 27.5,4.3,6.8,,,-----
+Kevin Huerter, SG, 13.2,3.5,2.5,,,-----
+Harrison Barnes, SF, 15.6,4.2,1.5,,,-----
+Keegan Murray, PF, 14.7,6.1,1.6,,,-----
+Domantas Sabonis, C, 20.4,13.4,7.7,,,-----
+::::: VS - 7:00 pm PT :::::
++++++Los Angeles Lakers,6-5, 1st West Pacific-----Kings PlayersPTSREBAST-----
+De'Aaron Fox, PG, 27.5,4.3,6.8,,,-----
+Kevin Huerter, SG, 13.2,3.5,2.5,,,-----
+Harrison Barnes, SF, 15.6,4.2,1.5,,,-----
+Keegan Murray, PF, 14.7,6.1,1.6,,,-----
+Domantas Sabonis, C, 20.4,13.4,7.7,,,-----
+=================================
+
++++++Cleveland Cavaliers,4-6, 3rd East Central-----Cavaliers PlayersPTSREBAST-----
+Craig Porter Jr., PG, 6.3,2.5,2.7,,,-----
+Donovan Mitchell, SG, 29.1,4.7,4.9,,,-----
+Caris LeVert, SF, 13.4,3.7,3.6,,,-----
+Evan Mobley, PF, 16.7,9.7,3,,,-----
+Jarrett Allen, C, 12.6,8.3,1.7,,,-----
+::::: VS - 7:00 pm PT :::::
++++++Portland Trail Blazers,3-7, 6th West Northwest-----Cavaliers PlayersPTSREBAST-----
+Craig Porter Jr., PG, 6.3,2.5,2.7,,,-----
+Donovan Mitchell, SG, 29.1,4.7,4.9,,,-----
+Caris LeVert, SF, 13.4,3.7,3.6,,,-----
+Evan Mobley, PF, 16.7,9.7,3,,,-----
+Jarrett Allen, C, 12.6,8.3,1.7,,,-----
+=================================
+
