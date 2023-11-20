@@ -1,13 +1,7 @@
 from selenium import webdriver
 import time
-from selenium.webdriver.common.action_chains import ActionChains
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support.ui import Select
-from selenium.webdriver.chrome.options import Options
-from selenium.common.exceptions import TimeoutException
 
 i = 0
 texts = []
@@ -21,7 +15,8 @@ while(i == 0):
         finds = driver.find_elements    
         time.sleep(1)
 
-        leftmenus = finds(By.CLASS_NAME, "starting-lineup-box")
+        leftmenus = finds(By.CLASS_NAME, "starting-lineup-wrapper")
+        time.sleep(5)
         for leftmenu in leftmenus:
             shorttermname = leftmenu.find_element(By.CLASS_NAME, "event-away-participant").find_element(By.CLASS_NAME, "link-black-underline").find_elements(By.TAG_NAME, "span")[1].text          
             standing = leftmenu.find_element(By.CLASS_NAME, "event-away-participant").find_element(By.CLASS_NAME, "event-top-participant-standing").text
@@ -55,15 +50,15 @@ while(i == 0):
                     texts.append(basketinfo.text + ",")
                 texts.append("-----")
             texts.append("=====")
-        print(texts)
+
     except Exception as error:
         print('error=================', error)
 
 f = open("lineups.txt", "w")
 for data in texts:
+
     if data == "+++++":
         f.write("============================")
-    f.write(data)
     if data == "-----":
         f.write("\n")
     if data == ":::::":
@@ -72,5 +67,5 @@ for data in texts:
         f.write("============================")
         f.write("\n")
         f.write("\n")
-
+    f.write(data)
 f.close()
