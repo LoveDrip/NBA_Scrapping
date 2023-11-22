@@ -1,5 +1,5 @@
 import time
-import msvcrt
+import cv2
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
@@ -9,17 +9,16 @@ from selenium.common.exceptions import WebDriverException
 from selenium.webdriver.chrome.options import Options
 
 
-i = j = k = l = 0
-n = 0
-j1 = k1 = l1 = 0
-headers = []
-texts = []
-pts = 0.0
-player_point = oponnent_point = 0.0
-oponnent_name = ""
-infos = ""
-while(i == 0):
-    i += 1
+def compile_code():
+    i = j = k = l = 0
+    n = 0
+    j1 = k1 = l1 = 0
+    headers = []
+    texts = []
+    pts = 0.0
+    player_point = oponnent_point = 0.0
+    oponnent_name = ""
+    infos = ""
     try:
         chrome_options = Options()
         chrome_options.add_argument("--ignore-certificate-error")
@@ -258,3 +257,17 @@ while(i == 0):
     f.write("\n") 
     f.close()
     print("----------- Completed Ended  -----------")
+
+
+
+def main():
+    while True:
+        k = cv2.waitKey(1) & 0xFF
+
+        if k == ord('q'):
+            break
+        compile_code()
+
+
+if __name__ == "__main__":
+    main()
