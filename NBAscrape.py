@@ -1,5 +1,8 @@
 import time
-import cv2
+import sys
+import keyboard
+import threading
+import signal
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
@@ -7,6 +10,9 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import WebDriverException
 from selenium.webdriver.chrome.options import Options
+
+
+Sentry = True
 
 
 def compile_code():
@@ -61,23 +67,14 @@ def compile_code():
             if row[1].text == "BKN":
                 headers.append(row[0].text)
             # headers.append("-")    
-        print("new")
+        # print("new")
         driver1 = webdriver.Chrome(options=chrome_options)
         driver1.get("https://sports.yahoo.com/nba/players/5473/")
         driver1.maximize_window()
         # time.sleep(2)
         # driver1.find_element(By.CLASS_NAME, "btn.secondary.accept-all").click()
         WebDriverWait(driver1, 10).until(EC.element_to_be_clickable((By.CLASS_NAME, "btn.secondary.accept-all"))).click()
-        player_status = WebDriverWait(driver1, 10).until(EC.presence_of_element_located((By.CLASS_NAME, "Row")))
-        player_position = player_status.find_elements(By.TAG_NAME, "span")[3].text
-
-        player_key_status = WebDriverWait(driver1, 10).until(EC.presence_of_element_located((By.CLASS_NAME, "ys-player-key-stats")))
-        print("player key status")
-        player_pts = player_key_status.find_elements(By.TAG_NAME, "div")[2].text
-        print("player pts")
-
-        print("PlayerPosition: " + player_position)
-
+        
         for name in headers:
             try:
                 # search_tag = driver1.find_element(By.CLASS_NAME, "ys-players-index")
@@ -92,27 +89,38 @@ def compile_code():
                 time.sleep(2)
                 try:
                     
+
+                    
                     # search_elements = search_tag.find_elements(By.TAG_NAME, "a")
                     search_elements = WebDriverWait(search_tag, 10).until(EC.presence_of_all_elements_located((By.TAG_NAME, "a")))
                     print("------------------ " +name+ " --------------------------")
                     if search_elements:
                         search_elements[0].click()
                         time.sleep(2)
+                        player_status = WebDriverWait(driver1, 10).until(EC.presence_of_element_located((By.CLASS_NAME, "Row")))
+                        player_position = player_status.find_elements(By.TAG_NAME, "span")[3].text
+
+                        player_key_status = WebDriverWait(driver1, 10).until(EC.presence_of_element_located((By.CLASS_NAME, "ys-player-key-stats")))
+                        print("player key status")
+                        player_pts = player_key_status.find_elements(By.TAG_NAME, "div")[2].text
+                        print("player pts")
+
+                        print("PlayerPosition: " + player_position)
                         WebDriverWait(driver1, 10).until(
                             EC.presence_of_element_located((By.TAG_NAME, "table"))
                         )
                         pts = 0.0
                         
                         GameLogTable = driver1.find_elements(By.TAG_NAME, "table")[0]
-                        print("GameLogTable")
+                        # print("GameLogTable")
                         tbody = WebDriverWait(GameLogTable, 10).until(
                             EC.presence_of_element_located((By.TAG_NAME, "tbody"))
                         )
-                        print("GameLogTabTbody")
+                        # print("GameLogTabTbody")
                         matches = WebDriverWait(tbody, 10).until(
                             EC.presence_of_all_elements_located((By.TAG_NAME, "tr"))
                         )
-                        print("Matches")
+                        # print("Matches")
                         if len(matches) > 0:
                             for bodies in matches:
                                 
@@ -120,13 +128,13 @@ def compile_code():
                                     EC.visibility_of_element_located((By.CSS_SELECTOR, "td:nth-child(24)"))  # Assuming it's the 24th td
                                 )
                                 pts += float(td_23.text)
-                            print("switch to main")
-                            print("Get PTS")
+                            # print("switch to main")
+                            # print("Get PTS")
                             
-                            print("matches Length: " + str(len(matches)))
+                            # print("matches Length: " + str(len(matches)))
 
-                            print("--- average ----")
-                            print(float(pts) / float(len(matches)))
+                            # print("--- average ----")
+                            # print(float(pts) / float(len(matches)))
 
                             player_point = 0.0
                             j = k = l = 0
@@ -146,13 +154,13 @@ def compile_code():
                             print("J: " +  str(j) + ", K: " + str(k) + ", L: " + str(l))
                             player_point = (j * 70 + k * 20 + l * 10) / float(len(matches))
 
-                            print("player point : " + str(player_point))
+                            # print("player point : " + str(player_point))
                             for bodies in matches:
                                 time.sleep(2)
                                 j1 = k1 = l1 = 0
                                 match_link = bodies.find_element(By.TAG_NAME, "a").get_attribute("href")
-                                print(match_link)
-                                print("Match Link")
+                                # print(match_link)
+                                # print("Match Link")
                                 driver1.execute_script("window.open(" + "'" + match_link + "'" + "," + " '_blank');")
                                 driver1.switch_to.window(driver1.window_handles[1])
                                 match_header = WebDriverWait(driver1, 10).until(EC.presence_of_element_located((By.CLASS_NAME, "match-stats")))
@@ -160,7 +168,7 @@ def compile_code():
                                 # print("Oponent name: " + oponnent_name)            
                                 names = oponnent_name.split()
                                 oponnent_short_name = names[1]                    
-                                print("oponnentshort name: ", oponnent_short_name)
+                                # print("oponnentshort name: ", oponnent_short_name)
                                 driver1.execute_script("window.open('https://draftedge.com/nba/nba-defense-vs-position/', '_blank');")
                                 driver1.switch_to.window(driver1.window_handles[2])
 
@@ -195,9 +203,9 @@ def compile_code():
                                         # print("Element  The td element is visible.")
 
                                         td = tr_element.find_elements(By.TAG_NAME, "td")
-                                        print("Game: ", td[0].text, " - ", oponnent_short_name)
+                                        # print("Game: ", td[0].text, " - ", oponnent_short_name)
                                         pts =td[3].text
-                                        print("PTS is succes")
+                                        # print("PTS is succes")
                                         print(pts)
                                         if td[0].text == oponnent_short_name:
                                             if (float(player_pts) -float(int(pts[1:]))) >= 0:
@@ -216,8 +224,7 @@ def compile_code():
                                 driver1.close()
                                 driver1.switch_to.window(driver1.window_handles[0])
 
-                            print("get oponent  percent")
-                            print("J1: " +  str(j1) + ", K1: " + str(k1) + ", L1: " + str(l1))
+                            
                             oponnent_point = (j1 * 70 + k1 * 20 + l1 * 10) / float(len(matches))
 
                             texts.append(name + ", ")
@@ -236,9 +243,7 @@ def compile_code():
                 print('-'*50)
                 print(e)
                 print('-'*50)
-            # time.sleep(2)
-            # headers.append("=====")
-            # headers.append("Name: " + find1(By.CLASS_NAME, "ys-name").text)
+           
         
         print(texts)
 
@@ -261,12 +266,13 @@ def compile_code():
 
 
 def main():
-    while True:
-        k = cv2.waitKey(1) & 0xFF
-
-        if k == ord('q'):
-            break
+    while Sentry:
         compile_code()
+    while True:
+        if keyboard.is_pressed("q"):
+            print("Q Pressed ending loop")
+            sys.exit()
+    
 
 
 if __name__ == "__main__":
