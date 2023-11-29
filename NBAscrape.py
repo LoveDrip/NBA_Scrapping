@@ -64,7 +64,7 @@ def compile_code():
             # print("2")
             # for i in row:
             #     headers.append(i.text + " , ")
-            if row[1].text == "BKN":
+            if (row[1].text == "BKN") & (row[2].text == "27"):
                 headers.append(row[0].text)
             # headers.append("-")    
         # print("new")
@@ -89,9 +89,6 @@ def compile_code():
                 time.sleep(2)
                 try:
                     
-
-                    
-                    # search_elements = search_tag.find_elements(By.TAG_NAME, "a")
                     search_elements = WebDriverWait(search_tag, 10).until(EC.presence_of_all_elements_located((By.TAG_NAME, "a")))
                     print("------------------ " +name+ " --------------------------")
                     if search_elements:
@@ -165,6 +162,8 @@ def compile_code():
                                 driver1.switch_to.window(driver1.window_handles[1])
                                 match_header = WebDriverWait(driver1, 10).until(EC.presence_of_element_located((By.CLASS_NAME, "match-stats")))
                                 oponnent_name = match_header.find_elements(By.TAG_NAME, "a")[0].text
+                                oponnent_name1 = match_header.find_elements(By.TAG_NAME, "a")[2].text
+
                                 # print("Oponent name: " + oponnent_name)            
                                 names = oponnent_name.split()
                                 oponnent_short_name = names[1]                    
@@ -227,9 +226,8 @@ def compile_code():
                             
                             oponnent_point = (j1 * 70 + k1 * 20 + l1 * 10) / float(len(matches))
 
-                            texts.append(name + ", ")
-                            texts.append(str(player_point) + ", ")
-                            texts.append(str(oponnent_point) + ", ")
+                            texts.append( name + ", " + str(player_point) + ", " + str(oponnent_point) + ", " + str(player_point + oponnent_point))
+                            print("texts: " + texts)
                         else:
                             print("No matches found.")
                     else:
@@ -253,15 +251,26 @@ def compile_code():
     print("----------- Calculator finished  -----------")
 
     print("----------- Save File  -----------")
-    f = open("nba.txt", "a")
-    for header in texts:
-        f.write(header)
-        # if header == "-":
-        #     header = ""
-        f.write(", ")
-    f.write("\n") 
-    f.close()
+    sorted_texts = sorted(texts, key=lambda x: int(x.split(',')[-1]))
+    print(sorted_texts)
+    # f = open("nba.txt", "a")
+    # for header in texts:
+    #     f.write(header)
+    #     f.write(", ")
+    # f.close()
+
+    # file = open("nba.txt", "r")
+    # lines = file.readlines()
+    # print("---Lines---")
+    # print(lines)
+    # players = lines[0].split("===")
+    # for player in players:
+    #     print(player.split(","))
+    #     print(player.split(",")[2])
+
+
     print("----------- Completed Ended  -----------")
+
 
 
 
